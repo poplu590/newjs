@@ -1,0 +1,201 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+header .headingsection{
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px 0;
+}
+header .headingsection .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .headingsection .nav button{
+    margin-left: 20px;
+    padding: 10px 20px;
+}
+.cursor{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+
+}
+
+.cursorsm{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.06s;
+    pointer-events: none;
+
+}
+
+.bodytog{
+    background-color: blue;
+    z-index: -9999;
+
+}
+
+.navsection{
+    position: fixed;
+    inset: 0;
+    background-color: rgb(58 58 58 / 30%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+.navbar{
+    width: 70%;
+    max-width: 180px;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    transition: 0.4s;
+    transform: translate(-100%);
+} 
+.navsection.active .navbar{
+    transform: translate(0);
+}
+
+.navbar .closebtn{
+    position: absolute;
+    right: -1px;
+    top: 16px;
+    background: red;
+    border: none;
+    color: white;
+    border-bottom-left-radius: 41%;
+    border-top-left-radius: 40%;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.navbar ul{
+    padding-top: 80px;
+}
+
+.navbar ul li{
+    padding: 20px 30px;
+    color: black;
+    border-bottom: 1px solid #bbbbbb;
+    cursor: pointer;
+    
+}
+
+
+/* .loginopen{
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 3px;
+    background: linear-gradient(to right, #00b8ef, #58d2f5);
+} */
+
+.loginsection{
+    position: fixed;
+    right: 0;
+    top: 108px;
+    background-color: aliceblue;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 250px;
+    height: 300px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: 0.4s;
+    transform: translate(150%);
+}
+.logactive{
+    transform: translate(0%);
+}
+.loginsection .loginpage{
+    padding: 25px;
+    text-align: center;
+}
+
+.loginsection .loginpage h2{
+    padding: 20px;
+    color: blue;
+    text-transform: capitalize;
+
+}
+
+.loginsection .loginpage .user{
+    margin-bottom: 10px;
+}
+.loginsection .loginpage input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(169, 169, 255);
+    /* margin-bottom: 20px; */
+}
+
+.loginsection .loginpage input:focus{
+    outline: 4px solid rgba(169, 169, 255, 0.5);
+}
+
+
+.loginsection .loginpage input::placeholder{
+    color: #ccc;
+}
+.loginpage .pass{
+    position: relative;
+}
+.loginpage .pass i{
+    position: absolute;
+    right: 14px;
+    top: 33%;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.loginsection .loginpage .submit{
+    margin-top: 26px;
+}
+.loginsection .loginpage .submit a{
+    padding: 10px 15px;
+    background: rgb(92, 92, 255);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.loginclosebtn{
+    position: absolute;
+    left: -29px;
+    top: 26px;
+    background: #5840d5;
+    border: none;
+    color: white;
+    border-bottom-left-radius: 41%;
+    border-top-left-radius: 40%;
+    padding: 6px 10px;
+    cursor: pointer;
+}
